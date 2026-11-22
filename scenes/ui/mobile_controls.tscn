@@ -1,0 +1,147 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/mobile_controls.gd" id="1_pad"]
+[ext_resource type="Script" path="res://scripts/ui/touch_button.gd" id="2_button"]
+
+[node name="MobileControls" type="CanvasLayer"]
+process_mode = 3
+layer = 15
+script = ExtResource("1_pad")
+
+[node name="LeftButton" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = -196.0
+offset_right = 196.0
+offset_bottom = -36.0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 0
+virtual_action = &"p1_left"
+
+[node name="RightButton" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 212.0
+offset_top = -196.0
+offset_right = 372.0
+offset_bottom = -36.0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 1
+virtual_action = &"p1_right"
+
+[node name="LaunchButton" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -374.0
+offset_top = -270.0
+offset_right = -246.0
+offset_bottom = -142.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 2
+virtual_action = &"p1_launch"
+
+[node name="ThrottleDownButton" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -374.0
+offset_top = -142.0
+offset_right = -246.0
+offset_bottom = -14.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 4
+virtual_action = &"p1_throttle_down"
+
+[node name="BoostButton" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -244.0
+offset_top = -344.0
+offset_right = -140.0
+offset_bottom = -240.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 7
+virtual_action = &"p1_boost"
+
+[node name="BombButton" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -134.0
+offset_top = -344.0
+offset_right = -30.0
+offset_bottom = -240.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 6
+virtual_action = &"p1_bomb"
+
+[node name="FlareButton" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -382.0
+offset_right = -256.0
+offset_bottom = -278.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 8
+virtual_action = &"p1_flare"
+
+[node name="ShieldButton" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -486.0
+offset_right = -36.0
+offset_bottom = -382.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 9
+virtual_action = &"p1_shield"
+
+[node name="FireButton" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -230.0
+offset_top = -230.0
+offset_right = -54.0
+offset_bottom = -54.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("2_button")
+icon = 5
+virtual_action = &"p1_fire"

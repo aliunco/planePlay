@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/explosion.gd" id="1_explosion"]
+[ext_resource type="Texture2D" path="res://assets/effects/spark.svg" id="2_spark"]
+
+[sub_resource type="Gradient" id="Gradient_spark"]
+offsets = PackedFloat32Array(0, 0.35, 1)
+colors = PackedColorArray(1, 0.98, 0.85, 1, 1, 0.75, 0.3, 1, 0.6, 0.25, 0.15, 0)
+
+[node name="Explosion" type="Node2D"]
+script = ExtResource("1_explosion")
+
+[node name="Fireball" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
+
+[node name="Shockwave" type="Line2D" parent="."]
+modulate = Color(1, 0.94, 0.8, 0)
+width = 5.0
+default_color = Color(1, 0.9, 0.66, 0.85)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Sparks" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 22
+lifetime = 0.75
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource("2_spark")
+spread = 180.0
+gravity = Vector2(0, 140)
+initial_velocity_min = 120.0
+initial_velocity_max = 340.0
+scale_amount_min = 0.12
+scale_amount_max = 0.38
+color_ramp = SubResource("Gradient_spark")
+

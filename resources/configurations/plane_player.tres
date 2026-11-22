@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="PlaneConfig" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://resources/configurations/plane_config.gd" id="1_script"]
+[ext_resource type="Resource" path="res://resources/configurations/projectile_player.tres" id="2_projectile"]
+
+[resource]
+script = ExtResource("1_script")
+plane_speed = 160.0
+rotation_speed = 100.0
+max_rotation = 360.0
+max_health = 150
+fire_cooldown = 0.34
+projectile_config = ExtResource("2_projectile")
+taxi_distance = 190.0
+taxi_acceleration = 230.0
+takeoff_pitch_degrees = 30.0
+takeoff_rotate_rate = 62.0
+takeoff_climb_seconds = 1.1
+takeoff_level_rate = 40.0
+livery_body = Color(0.34902, 0.415686, 0.247059, 1)
+livery_accent = Color(0.901961, 0.72549, 0.247059, 1)
+livery_belly = Color(0.298039, 0.337255, 0.270588, 1)
+visual_flip_h = false
+display_name = "Player 1"

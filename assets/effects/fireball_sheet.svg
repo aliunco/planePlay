@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="200" viewBox="0 0 2000 200">
+  <defs>
+    <radialGradient id="flame">
+      <stop offset="0" stop-color="#ffc34a" stop-opacity="0.98"/>
+      <stop offset="0.3" stop-color="#ff9a24" stop-opacity="0.95"/>
+      <stop offset="0.62" stop-color="#f2600f" stop-opacity="0.82"/>
+      <stop offset="0.86" stop-color="#c2360a" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#8f2506" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hot">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#fff0a8" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffbe3c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="smoke">
+      <stop offset="0" stop-color="#c9c6c2" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#9d9a97" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#6f6d6b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(0, 0)">
+    <g fill="url(#flame)" opacity="0.92">
+      <circle cx="109.8" cy="100.0" r="22.6"/>
+      <circle cx="99.6" cy="115.7" r="35.3"/>
+      <circle cx="99.9" cy="100.0" r="19.3"/>
+      <circle cx="88.0" cy="91.0" r="10.8"/>
+      <circle cx="100.1" cy="89.0" r="29.0"/>
+    </g>
+    <circle cx="100.0" cy="100.0" r="24.9" fill="url(#hot)" opacity="0.95"/>
+  </g>
+  <g transform="translate(200, 0)">
+    <g fill="url(#flame)" opacity="0.92">
+      <circle cx="116.9" cy="105.4" r="31.5"/>
+      <circle cx="99.4" cy="110.3" r="34.9"/>
+      <circle cx="98.1" cy="101.1" r="14.3"/>
+      <circle cx="80.2" cy="93.9" r="16.2"/>
+      <circle cx="99.7" cy="95.4" r="36.3"/>
+    </g>
+    <circle cx="100.0" cy="100.0" r="26.7" fill="url(#hot)" opacity="0.95"/>
+  </g>
+  <g transform="translate(400, 0)">
+    <g fill="url(#flame)" opacity="0.92">
+      <circle cx="123.0" cy="108.1" r="42.8"/>
+      <circle cx="101.1" cy="103.8" r="33.6"/>
+      <circle cx="93.6" cy="107.9" r="12.6"/>
+      <circle cx="78.2" cy="95.0" r="27.2"/>
+      <circle cx="100.1" cy="99.7" r="44.4"/>
+    </g>
+    <circle cx="100.0" cy="100.0" r="31.2" fill="url(#hot)" opacity="0.95"/>
+  </g>
+  <g transform="translate(600, 0)">
+    <g fill="url(#flame)" opacity="0.92">
+      <circle cx="125.2" cy="101.3" r="52.9"/>
+      <circle cx="100.0" cy="100.0" r="29.6"/>
+      <circle cx="87.5" cy="118.4" r="15.9"/>
+      <circle cx="84.8" cy="92.1" r="42.8"/>
+      <circle cx="101.1" cy="98.4" r="49.5"/>
+    </g>
+    <circle cx="100.0" cy="100.0" r="37.2" fill="url(#hot)" opacity="0.95"/>
+  </g>
+  <g transform="translate(800, 0)">
+    <g fill="url(#flame)" opacity="0.92">
+      <circle cx="116.8" cy="95.2" r="57.3"/>
+      <circle cx="102.6" cy="102.8" r="23.7"/>
+      <circle cx="74.9" cy="121.1" r="25.7"/>
+      <circle cx="95.2" cy="94.5" r="58.8"/>
+      <circle cx="108.3" cy="91.1" r="48.3"/>
+    </g>
+    <circle cx="100.0" cy="100.0" r="43.4" fill="url(#hot)" opacity="0.95"/>
+  </g>
+  <g transform="translate(1000, 0)">
+    <g fill="url(#flame)" opacity="0.92">
+      <circle cx="105.7" cy="97.9" r="53.0"/>
+      <circle cx="107.2" cy="114.5" r="19.8"/>
+      <circle cx="67.8" cy="111.4" r="41.5"/>
+      <circle cx="99.8" cy="99.7" r="69.1"/>
+      <circle cx="113.2" cy="76.6" r="40.3"/>
+    </g>
+    <circle cx="100.0" cy="100.0" r="48.5" fill="url(#hot)" opacity="0.66"/>
+  </g>
+  <g transform="translate(1200, 0)">
+    <g fill="url(#smoke)" opacity="0.95">
+      <circle cx="133.1" cy="109.2" r="29.8"/>
+      <circle cx="100.9" cy="123.9" r="42.3"/>
+      <circle cx="67.8" cy="110.4" r="21.8"/>
+      <circle cx="66.9" cy="82.1" r="22.6"/>
+      <circle cx="99.1" cy="67.4" r="42.6"/>
+      <circle cx="132.2" cy="81.0" r="28.8"/>
+    </g>
+  </g>
+  <g transform="translate(1400, 0)">
+    <g fill="url(#smoke)" opacity="0.95">
+      <circle cx="138.4" cy="104.2" r="37.7"/>
+      <circle cx="101.0" cy="121.3" r="52.2"/>
+      <circle cx="62.6" cy="105.5" r="28.3"/>
+      <circle cx="61.6" cy="72.7" r="29.3"/>
+      <circle cx="99.0" cy="55.6" r="52.5"/>
+      <circle cx="137.4" cy="71.4" r="36.5"/>
+    </g>
+  </g>
+  <g transform="translate(1600, 0)">
+    <g fill="url(#smoke)" opacity="0.55">
+      <circle cx="143.8" cy="99.2" r="46.4"/>
+      <circle cx="101.2" cy="118.6" r="62.9"/>
+      <circle cx="57.4" cy="100.7" r="35.7"/>
+      <circle cx="56.2" cy="63.3" r="36.8"/>
+      <circle cx="98.8" cy="43.8" r="63.3"/>
+      <circle cx="142.6" cy="61.8" r="45.1"/>
+    </g>
+  </g>
+  <g transform="translate(1800, 0)">
+    <g fill="url(#smoke)" opacity="0.00">
+      <circle cx="149.1" cy="94.1" r="56.0"/>
+      <circle cx="101.3" cy="116.0" r="74.5"/>
+      <circle cx="52.2" cy="95.9" r="44.0"/>
+      <circle cx="50.9" cy="53.9" r="45.2"/>
+      <circle cx="98.7" cy="32.0" r="75.0"/>
+      <circle cx="147.8" cy="52.1" r="54.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ProjectileConfig" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://resources/configurations/projectile_config.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/effects/bullet.svg" id="2_texture"]
+
+[resource]
+script = ExtResource("1_script")
+speed_multiplier = 2.0
+absolute_speed = 330.0
+lifetime = 3.0
+damage = 34
+radius = 8.0
+tint = Color(0.55, 0.85, 1, 1)
+texture = ExtResource("2_texture")
+homing = true
+homing_turn_rate = 130.0

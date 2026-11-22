@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="GameConfig" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/configurations/game_config.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+world_width = 3200.0
+world_top = -18000.0
+world_bottom = 280.0
+ground_y = 0.0
+ground_depth = 320.0
+player_start_x = 560.0
+opponent_start_x = 2640.0
+parked_height = 19.0
+camera_zoom = 0.82
+camera_follow_speed = 5.0

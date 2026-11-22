@@ -1,0 +1,275 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+[ext_resource type="Script" path="res://scripts/environment/sky.gd" id="2_sky"]
+[ext_resource type="Script" path="res://scripts/environment/vignette.gd" id="3_vignette"]
+[ext_resource type="Script" path="res://scripts/environment/hills.gd" id="4_hills"]
+[ext_resource type="PackedScene" path="res://scenes/environment/landscape.tscn" id="5_landscape"]
+[ext_resource type="Script" path="res://scripts/ui/plane_stat_bars.gd" id="6_stats"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Sky" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_sky")
+sun_at = Vector2(0.19, 0.24)
+sun_radius = 38.0
+
+[node name="Vignette" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_vignette")
+
+[node name="Backdrop" type="Node2D" parent="."]
+
+[node name="Clouds" type="Node2D" parent="Backdrop"]
+
+[node name="Hills" type="Node2D" parent="Backdrop"]
+script = ExtResource("4_hills")
+
+[node name="Landscape" parent="Backdrop" instance=ExtResource("5_landscape")]
+
+[node name="HeroPlane" type="Node2D" parent="Backdrop"]
+position = Vector2(300, 210)
+scale = Vector2(0.9, 0.9)
+
+[node name="Body" type="Sprite2D" parent="Backdrop/HeroPlane"]
+
+[node name="Center" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Content" type="VBoxContainer" parent="Center"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -300.0
+offset_right = 320.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Card" type="PanelContainer" parent="Center/Content"]
+layout_mode = 2
+
+[node name="Column" type="VBoxContainer" parent="Center/Content/Card"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="Center/Content/Card/Column"]
+layout_mode = 2
+text = "SKY DUEL"
+horizontal_alignment = 1
+
+[node name="Rule" type="ColorRect" parent="Center/Content/Card/Column"]
+custom_minimum_size = Vector2(132, 3)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(1, 0.796, 0.361, 1)
+
+[node name="Subtitle" type="Label" parent="Center/Content/Card/Column"]
+layout_mode = 2
+text = "Side-view airplane dogfights over a warm valley"
+horizontal_alignment = 1
+
+[node name="PlaneLabel" type="Label" parent="Center/Content/Card/Column"]
+layout_mode = 2
+text = "FIGHTER"
+horizontal_alignment = 1
+
+[node name="PlaneRow" type="HBoxContainer" parent="Center/Content/Card/Column"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PrevButton" type="Button" parent="Center/Content/Card/Column/PlaneRow"]
+custom_minimum_size = Vector2(52, 92)
+layout_mode = 2
+text = "<"
+
+[node name="PlaneCard" type="PanelContainer" parent="Center/Content/Card/Column/PlaneRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlaneBox" type="HBoxContainer" parent="Center/Content/Card/Column/PlaneRow/PlaneCard"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PlanePreview" type="TextureRect" parent="Center/Content/Card/Column/PlaneRow/PlaneCard/PlaneBox"]
+custom_minimum_size = Vector2(166, 82)
+layout_mode = 2
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlaneInfo" type="VBoxContainer" parent="Center/Content/Card/Column/PlaneRow/PlaneCard/PlaneBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="PlaneName" type="Label" parent="Center/Content/Card/Column/PlaneRow/PlaneCard/PlaneBox/PlaneInfo"]
+layout_mode = 2
+text = "Kestrel Mk I"
+
+[node name="PlaneStats" type="Control" parent="Center/Content/Card/Column/PlaneRow/PlaneCard/PlaneBox/PlaneInfo"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+script = ExtResource("6_stats")
+
+[node name="NextButton" type="Button" parent="Center/Content/Card/Column/PlaneRow"]
+custom_minimum_size = Vector2(52, 92)
+layout_mode = 2
+text = ">"
+
+[node name="Gap" type="Control" parent="Center/Content/Card/Column"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="DifficultyLabel" type="Label" parent="Center/Content/Card/Column"]
+layout_mode = 2
+text = "AI DIFFICULTY"
+horizontal_alignment = 1
+
+[node name="DifficultyRow" type="HBoxContainer" parent="Center/Content/Card/Column"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="EasyButton" type="Button" parent="Center/Content/Card/Column/DifficultyRow"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Easy"
+
+[node name="NormalButton" type="Button" parent="Center/Content/Card/Column/DifficultyRow"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Normal"
+
+[node name="HardButton" type="Button" parent="Center/Content/Card/Column/DifficultyRow"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hard"
+
+[node name="WeatherLabel" type="Label" parent="Center/Content/Card/Column"]
+layout_mode = 2
+text = "WEATHER"
+horizontal_alignment = 1
+
+[node name="WeatherRow" type="HBoxContainer" parent="Center/Content/Card/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AutoButton" type="Button" parent="Center/Content/Card/Column/WeatherRow"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Auto"
+
+[node name="ClearButton" type="Button" parent="Center/Content/Card/Column/WeatherRow"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear"
+
+[node name="CloudyButton" type="Button" parent="Center/Content/Card/Column/WeatherRow"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cloudy"
+
+[node name="RainButton" type="Button" parent="Center/Content/Card/Column/WeatherRow"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rain"
+
+[node name="SnowButton" type="Button" parent="Center/Content/Card/Column/WeatherRow"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Snow"
+
+[node name="PlayRow" type="HBoxContainer" parent="Center/Content/Card/Column"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PlayButton" type="Button" parent="Center/Content/Card/Column/PlayRow"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Play vs AI"
+
+[node name="SurvivalButton" type="Button" parent="Center/Content/Card/Column/PlayRow"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Survival"
+
+[node name="LocalButton" type="Button" parent="Center/Content/Card/Column"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+text = "Two Players  —  Same Screen"
+
+[node name="LanRow" type="HBoxContainer" parent="Center/Content/Card/Column"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HostButton" type="Button" parent="Center/Content/Card/Column/LanRow"]
+custom_minimum_size = Vector2(180, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Host LAN"
+
+[node name="AddressField" type="LineEdit" parent="Center/Content/Card/Column/LanRow"]
+custom_minimum_size = Vector2(150, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Host IP"
+
+[node name="JoinButton" type="Button" parent="Center/Content/Card/Column/LanRow"]
+custom_minimum_size = Vector2(110, 48)
+layout_mode = 2
+text = "Join"
+
+[node name="Hint" type="Label" parent="Center/Content/Card/Column"]
+layout_mode = 2
+text = "A / D turns   ·   Space fires   ·   W takes off   ·   Esc pauses"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Status" type="Label" parent="Center/Content/Card/Column"]
+modulate = Color(1, 0.85, 0.42, 1)
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
